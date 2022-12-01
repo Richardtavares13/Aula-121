@@ -57,7 +57,7 @@ while (cap.isOpened()):
     resto1 = cv2.bitwise_and(img,img,mask = mask_2)
 
     #Mantendo apenas a parte das imagens com a cor vermelha
-    resto2 = cv2.bitwise_and(img,img,mask = mask_1)
+    resto2 = cv2.bitwise_and(bg,bg,mask = mask_1)
 
     #Gerando o resultado final mesclando res_1 e res_2
     imagem_final = cv2.addWeighted(resto1,1,resto2,1,0)
